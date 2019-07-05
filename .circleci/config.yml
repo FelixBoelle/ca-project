@@ -41,7 +41,7 @@ jobs:
 
   runserver:
     docker:
-      - image: feltbo/projectapp
+      - image: feltbo/projectapp:$CIRCLE_SHA1
     steps:
       - run:
           name: Deploy over ssh
