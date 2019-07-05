@@ -49,14 +49,14 @@ jobs:
           command: |
             ssh ubuntu@104.199.3.123
             docker pull feltbo/projectapp
-            docker run run.py
+            docker run feltbo/projectapp run.py
 
 workflows:
   version: 2
   two_job_flow:
     jobs:
-      - dockerize
-      - runserver:
-          requires:
-            - dockerize
+      #- dockerize
+      - runserver
+      #    requires:
+      #      - dockerize
 
