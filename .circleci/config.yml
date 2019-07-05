@@ -20,7 +20,7 @@ jobs:
       - run:
           name: run tests
           command: |
-            python -m xmlrunner discover tests.py -o test-results
+            python -m xmlrunner discover -s tests -t tests -o test-results
       - store_test_results:
           path: test-results
       - store_artifacts:
