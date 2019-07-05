@@ -41,12 +41,14 @@ jobs:
 
   runserver:
     docker:
-      - image: feltbo/projectapp:$CIRCLE_SHA1
+      - image: alpine
     steps:
       - run:
           name: Deploy over ssh
           command: |
-            ssh ubuntu@104.199.3.123 docker-compose up
+            ssh ubuntu@104.199.3.123
+            docker pull feltbo/projectapp
+            docker run run.py
 
 workflows:
   version: 2
