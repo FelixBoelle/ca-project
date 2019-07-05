@@ -1,8 +1,8 @@
 version: '3'
 services:
   app:
-    image: "projectapp"
+    image: "feltbo/projectapp"
     command: |
-      tests.py
+      run.py
     ports:
       - 5000:5000
