@@ -59,7 +59,7 @@ workflows:
   two_job_flow:
     jobs:
       - dockerize
-      - deploytest
+      - deploytest:
           requires:
             - deploy
       - deploy
