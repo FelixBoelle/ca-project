@@ -47,8 +47,7 @@ jobs:
       - run:
           name: Deploy over ssh
           command: |
-            ssh ubuntu@104.199.3.123
-            yes
+            ssh -y ubuntu@104.199.3.123
             docker pull feltbo/projectapp
             docker run feltbo/projectapp run.py
 
