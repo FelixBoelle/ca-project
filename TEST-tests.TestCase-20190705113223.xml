@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="tests.py" name="tests.TestCase-20190705113223" skipped="0" tests="3" time="0.094" timestamp="2019-07-05T11:32:23">
+	<testcase classname="tests.TestCase" file="tests.py" line="42" name="test_add_post_is_added" time="0.051" timestamp="2019-07-05T11:32:23">
+		<system-out>
+<![CDATA[1
+]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+	<testcase classname="tests.TestCase" file="tests.py" line="37" name="test_no_predefined_posts" time="0.022" timestamp="2019-07-05T11:32:23">
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+	<testcase classname="tests.TestCase" file="tests.py" line="33" name="test_silly" time="0.022" timestamp="2019-07-05T11:32:23">
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>
