@@ -40,6 +40,8 @@ jobs:
        - run: docker push feltbo/projectapp:$CIRCLE_SHA1
 
   runserver:
+    docker:
+      - image: feltbo/projectapp
     steps:
       - run:
         name: Deploy over ssh
@@ -52,4 +54,6 @@ workflows:
     jobs:
       - dockerize
       - runserver
+          requires:
+            - dockerize
 
