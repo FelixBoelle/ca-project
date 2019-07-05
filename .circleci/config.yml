@@ -39,7 +39,7 @@ jobs:
        # deploy the image
        - run: docker push feltbo/projectapp:latest
 
-  runserver:
+  deploy:
     machine: true
     steps:
       - run:
@@ -47,13 +47,22 @@ jobs:
           command: |
             ssh -o StrictHostKeyChecking=no ubuntu@104.199.3.123 \
             docker run -p 5000:5000 feltbo/projectapp run.py
-
+  deploytest:
+    machine: true
+    steps:
+      - run:
+          name: Deploy over ssh
+          command: |
+            ssh -o StrictHostKeyChecking=no ubuntu@104.199.3.123 \
+            docker run -p 5000:5000 feltbo/projectapp run.py
+            curl 104.199.3.123:5000
 workflows:
   version: 2
   two_job_flow:
     jobs:
       - dockerize
-      - runserver:
-          requires:
-            - dockerize
+      - deploytest
+      #- deploy:
+      #    requires:
+      #      - dockerize
 
