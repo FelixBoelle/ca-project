@@ -44,9 +44,9 @@ jobs:
       - image: feltbo/projectapp
     steps:
       - run:
-        name: Deploy over ssh
-        command: |
-          ssh ubuntu@104.199.3.123 docker-compose up
+          name: Deploy over ssh
+          command: |
+            ssh ubuntu@104.199.3.123 docker-compose up
 
 workflows:
   version: 2
