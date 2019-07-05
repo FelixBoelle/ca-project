@@ -9,6 +9,7 @@ jobs:
       - image: python:2.7-slim
     steps:
       - checkout
+      - run: mkdir test-results
       # Download and cache dependencies
       - run:
           name: install dependencies
@@ -21,7 +22,7 @@ jobs:
           command: |
             python tests.py
       - store_test_results:
-          path: build/test-results/
+          path: test-results
 
 workflows:
   version: 2
