@@ -40,10 +40,8 @@ jobs:
        - run: docker push feltbo/projectapp:$CIRCLE_SHA1
 
   runserver:
-    docker:
-      - image: ubuntu:14.04
+    machine: true
     steps:
-      - run: apt-get update && apt-get install -y openssh-server
       - run:
           name: Deploy over ssh
           command: |
@@ -54,8 +52,8 @@ workflows:
   version: 2
   two_job_flow:
     jobs:
-      #- dockerize
+      - dockerize
       - runserver
-      #    requires:
-      #      - dockerize
+          requires:
+            - dockerize
 
