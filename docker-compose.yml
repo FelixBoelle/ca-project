@@ -2,5 +2,7 @@ version: '3'
 services:
   app:
     image: "projectapp"
+    command: |
+      tests.py
     ports:
       - 5000:5000
