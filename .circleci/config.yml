@@ -15,7 +15,7 @@ jobs:
           name: install dependencies
           command: |
             pip install --trusted-host pypi.python.org -r requirements.txt
-
+            pip install unittest-xml-reporting
       # run tests
       - run:
           name: run tests
