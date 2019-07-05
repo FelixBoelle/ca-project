@@ -43,6 +43,7 @@ jobs:
     docker:
       - image: ubuntu:14.04
     steps:
+      - run: apt-get update && apt-get install -y && ssh
       - run:
           name: Deploy over ssh
           command: |
