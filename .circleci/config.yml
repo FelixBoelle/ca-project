@@ -53,7 +53,7 @@ workflows:
   two_job_flow:
     jobs:
       - dockerize
-      - runserver
+      - runserver:
           requires:
             - dockerize
 
