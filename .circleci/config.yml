@@ -47,9 +47,8 @@ jobs:
       - run:
           name: Deploy over ssh
           command: |
-            ssh -o StrictHostKeyChecking=no ubuntu@104.199.3.123
-            docker pull feltbo/projectapp
-            docker run feltbo/projectapp run.py
+            ssh -o StrictHostKeyChecking=no ubuntu@104.199.3.123 \
+            docker run -p 5000:5000 feltbo/projectapp run.py
 
 workflows:
   version: 2
