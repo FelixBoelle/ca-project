@@ -41,7 +41,7 @@ jobs:
 
   runserver:
     docker:
-      - image: alpine
+      - image: ubuntu:14.04
     steps:
       - run:
           name: Deploy over ssh
